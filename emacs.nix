@@ -21,6 +21,7 @@ in
     pkgs.emacs27Packages.company                  # COMplete ANYthing
     pkgs.emacs27Packages.expand-region            # expand selections
     pkgs.emacs27Packages.fill-column-indicator    # show fill column
+    pkgs.emacs27Packages.haskell-mode             # still needed?
     pkgs.emacs27Packages.hydra                    # key binding families
     pkgs.emacs27Packages.lsp-haskell              # LSP for Haskell
     pkgs.emacs27Packages.lsp-mode                 # LSP (Language Server Protocol)

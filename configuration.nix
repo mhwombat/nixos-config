@@ -14,6 +14,7 @@ in
       ./wayland.nix
       ./python3.nix
       ./containers.nix
+      hello-nix-flake.nixosModules.hello
       ./packages.nix
     ];
 }

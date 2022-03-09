@@ -16,7 +16,8 @@
       wombat11k = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-            hello-nix-flake.nixosModules.hello
+            # hello-nix-flake.nixosModules.hello
+            # jot.nixosModules.jot
             ./configuration.nix
           ];
       };
