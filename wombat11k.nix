@@ -17,11 +17,9 @@
     wireless = {
       enable = true;  # Enables wireless support via wpa_supplicant.
       interfaces = [ "wlo2" ];
-      # networks = {
-      #   "FRITZ!Box 7530 NU" = {
-      #     pskRaw = "<redacted, importing SECRETS.nix instead>";
-      #   };
-      # };
+      networks = {
+        "FRITZ!Box 7530 NU".pskRaw = "6d89c405b8cbf2899d7254011f1ac901a1e9287d6566ca48f607fe03a5a71452";
+      };
     };
   };
 

@@ -1,4 +1,4 @@
-{ config, pkgs, options, jot, pandoc-select-code, ... }:
+{ config, pkgs, options, hello-haskell-flake, jot, pandoc-select-code, ... }:
 
 with pkgs;
 {
@@ -7,13 +7,15 @@ with pkgs;
     "nodejs-10.24.1"
   ];
 
+  nixpkgs.overlays = [
+    (import ./overlays/default.nix)
+  ];
+
   # Packages I want to use
   environment.systemPackages = [
     # My custom packages
-    # jot
-    # pandoc-select-code
-    # (builtins.getFlake "github:mhwombat/jot")
-    # (builtins.getFlake "github:mhwombat/pandoc-select-code")
+    jot
+    pandoc-select-code
     # Standard packages
     alacritty # X and wayland
     aspell
@@ -32,6 +34,7 @@ with pkgs;
     bind # for dig
     binutils-unwrapped
     # busybox overwrites realpath!
+    cabal2nix
     cabal-install
     cage # wayland, provides Xwayland to qtile
     calibre # X and wayland
