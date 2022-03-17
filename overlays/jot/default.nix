@@ -1,4 +1,3 @@
-THIS TEXT WILL CAUSE A SYNTAX ERROR, WHICH LETS ME KNOW THIS FILE IS BEING READ
 { mkDerivation, base, cmdargs, directory, fetchgit, filepath
 , process, lib, time
 }:

@@ -1,4 +1,4 @@
-{ config, pkgs, options, hello-haskell-flake, jot, pandoc-select-code, ... }:
+{ config, pkgs, options, ... }:
 
 with pkgs;
 {
@@ -14,8 +14,8 @@ with pkgs;
   # Packages I want to use
   environment.systemPackages = [
     # My custom packages
-    jot
-    pandoc-select-code
+    pkgs.jot
+    pkgs.pandoc-select-code
     # Standard packages
     alacritty # X and wayland
     aspell
