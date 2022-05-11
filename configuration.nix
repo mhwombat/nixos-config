@@ -11,9 +11,9 @@ in
       ./locale.nix
       ./xserver.nix
       ./wayland.nix
-      ./python3.nix
       ./containers.nix
       ./packages.nix
+      ./vmware.nix
     ];
 }
 
