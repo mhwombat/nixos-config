@@ -1,10 +1,10 @@
 { mkDerivation, fetchgit, lib, base, pandoc, pandoc-types }:
 mkDerivation {
-  pname = "pandoc-select-code";
-  version = "0.1.0.0";
+  pname = "pandoc-linear-table";
+  version = "0.2.0.2";
   src = fetchgit {
-    url = "https://github.com/mhwombat/pandoc-select-code.git";
-    sha256 = "sha256-5M8K6dlhEUyaKMvxs8ajhTdQl8IpxNUvU4ndJKc/Tw0=";
+    url = "https://github.com/mhwombat/pandoc-linear-table.git";
+    sha256 = "sha256-kAxwcYgJE6G5AyQWV5wbFziqO0MWoqruTHgKItJ5vLQ=";
   };
   isLibrary = false;
   isExecutable = true;
