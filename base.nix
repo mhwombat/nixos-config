@@ -4,6 +4,9 @@
   # Allow software with an unfree license
   nixpkgs.config.allowUnfree = true;
 
+  # Allow broken packages
+  # nixpkgs.config.allowBroken = true;
+
   # Set the JAVA_HOME environment variable
   programs.java.enable = true;
 
