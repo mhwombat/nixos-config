@@ -17,18 +17,18 @@ let
   emacsWithPackages = (pkgs.emacsPackagesFor myEmacs).emacsWithPackages;
 in
   emacsWithPackages (epkgs: [
-    pkgs.emacs27Packages.base16-theme             # base16 theme schema
-    pkgs.emacs27Packages.company                  # COMplete ANYthing
-    pkgs.emacs27Packages.expand-region            # expand selections
-    pkgs.emacs27Packages.fill-column-indicator    # show fill column
-    pkgs.emacs27Packages.haskell-mode             # still needed?
-    pkgs.emacs27Packages.hydra                    # key binding families
-    pkgs.emacs27Packages.lsp-haskell              # LSP for Haskell
-    pkgs.emacs27Packages.lsp-mode                 # LSP (Language Server Protocol)
-    pkgs.emacs27Packages.lsp-ui                   # Extra LSP stuff
-    pkgs.emacs27Packages.lv                       # hints for hydra
-    pkgs.emacs27Packages.markdown-mode            # Markdown editing mode
-    pkgs.emacs27Packages.undo-tree                # Undo/redo that behaves like other apps
-    pkgs.emacs27Packages.vertico                  # Completions
-    pkgs.emacs27Packages.yasnippet                # Used by company
+    pkgs.emacsPackages.base16-theme             # base16 theme schema
+    pkgs.emacsPackages.company                  # COMplete ANYthing
+    pkgs.emacsPackages.expand-region            # expand selections
+    pkgs.emacsPackages.fill-column-indicator    # show fill column
+    pkgs.emacsPackages.haskell-mode             # still needed, but not sure why
+    pkgs.emacsPackages.hydra                    # key binding families
+    pkgs.emacsPackages.lsp-haskell              # LSP for Haskell
+    pkgs.emacsPackages.lsp-mode                 # LSP (Language Server Protocol)
+    pkgs.emacsPackages.lsp-ui                   # Extra LSP stuff
+    pkgs.emacsPackages.lv                       # hints for hydra
+    pkgs.emacsPackages.markdown-mode            # Markdown editing mode
+    pkgs.emacsPackages.undo-tree                # Undo/redo that behaves like other apps
+    pkgs.emacsPackages.vertico                  # Completions
+    pkgs.emacsPackages.yasnippet                # Used by company
   ])
