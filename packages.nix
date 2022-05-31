@@ -79,7 +79,7 @@ with pkgs;
     graphviz
     hardinfo
     haskell-language-server
-    haskellPackages.brittany # for language server
+    # haskellPackages.brittany # for language server
     haskellPackages.citeproc
     # haskellPackages.doi # broken as of 21.05
     haskellPackages.floskell # for language server
@@ -88,7 +88,7 @@ with pkgs;
     haskellPackages.haskell-language-server
     haskellPackages.hasktags
     haskellPackages.hlint
-    haskellPackages.hls-brittany-plugin # for language server
+    # haskellPackages.hls-brittany-plugin # for language server
     haskellPackages.hls-call-hierarchy-plugin # for language server
     haskellPackages.hls-class-plugin # for language server
     haskellPackages.hls-eval-plugin # for language server
