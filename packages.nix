@@ -3,9 +3,9 @@
 with pkgs;
 {
 
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "nodejs-10.24.1"
-  # ];
+  nixpkgs.config.permittedInsecurePackages = [
+    "python3.10-kerberos-1.3.1"
+  ];
 
   nixpkgs.overlays = [
     (import ./overlays/default.nix)
@@ -117,6 +117,7 @@ with pkgs;
     inetutils # provides telnet
     inkscape # X and wayland
     ispell
+    jq # used by my sway-tree-launcher
     kdiff3
     killall
     kitty # X and wayland
@@ -143,6 +144,7 @@ with pkgs;
     nix-prefetch-git
     # nixos-generators
     # nodePackages.sloc
+    # obsidian
     offlineimap
     onedrive
     openssl
@@ -174,8 +176,9 @@ with pkgs;
     unrar
     unzip
     usbutils
-    vistafonts # True-type fonts from MS Windows
+    # vistafonts # True-type fonts from MS Windows
     vlc # X-only until I set QT environment
+    (import ./vscodium.nix { inherit pkgs; }) # X-only? X and Wayland?
     wacomtablet
     waybar # wayland only
     # wayland-scanner
