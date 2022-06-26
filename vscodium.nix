@@ -9,14 +9,13 @@ To find out what packages are available for vscode/vscodium:
 
 let
   extensions = (with pkgs.vscode-extensions; [
+      # vspacecode.vspacecode
       bbenoist.nix
       ms-python.python
-      ms-azuretools.vscode-docker
+      # vspacecode.whichkey
+      # ms-azuretools.vscode-docker
       haskell.haskell
       justusadam.language-haskell
-      # hoovercj.haskell-linter
-      # vigoo.stylish-haskell
-      # berberman.vscode-cabal-fmt
     ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
       name = "remote-ssh-edit";

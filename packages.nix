@@ -49,9 +49,11 @@ with pkgs;
     dos2unix
     # (dwl.override { conf = /home/amy/.config/dwl/config.h; enable-xwayland = true; })
     # dzen2
-    (import ./emacs.nix { inherit pkgs; }) # X-only
+    # (import ./emacs.nix { inherit pkgs; }) # X-only
+    (emacs.override { nativeComp = true; })
     evince # X and wayland
     fbreader # X only. Binary is called "FBReader"
+    fd # for doomemacs
     firefox # X and wayland
     font-awesome
     # fzf
@@ -110,6 +112,7 @@ with pkgs;
     # haskellPackages.pandoc-include # broken as of 21.05
     # haskellPackages.stylish-cabal # for language server
     haskellPackages.stylish-haskell # for language server
+    helix
     hplip
     hplipWithPlugin
     imagemagick
@@ -118,6 +121,7 @@ with pkgs;
     inkscape # X and wayland
     ispell
     jq # used by my sway-tree-launcher
+    kakoune
     kdiff3
     killall
     kitty # X and wayland
@@ -134,6 +138,7 @@ with pkgs;
     lm_sensors
     lsof
     lshw
+    lua53Packages.dkjson # for textadept lsp module
     # lxqt.qterminal # X and wayland
     meld # X and wayland
     memtester
@@ -162,6 +167,8 @@ with pkgs;
     qpdfview # X and wayland
     qtile # X and wayland
     # retext # markdown editor
+    ripgrep # for doomemacs
+    shellcheck # for doomemacs
     signal-desktop # X-only
     slurp # wayland only, region selector
     spaceship-prompt
@@ -172,6 +179,7 @@ with pkgs;
     # sxiv # X-only
     # tabula # extract tables from PDF files
     texlive.combined.scheme-full
+    textadept
     tree
     unrar
     unzip
