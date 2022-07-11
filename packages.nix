@@ -14,7 +14,7 @@ with pkgs;
   # Packages I want to use
   environment.systemPackages = [
     # My custom packages
-    pkgs.jot
+    pkgs.amy-jot
     # pkgs.pandoc-linear-table
     # pkgs.pandoc-logic-proof
     # pkgs.pandoc-columns
@@ -49,11 +49,11 @@ with pkgs;
     dos2unix
     # (dwl.override { conf = /home/amy/.config/dwl/config.h; enable-xwayland = true; })
     # dzen2
-    # (import ./emacs.nix { inherit pkgs; }) # X-only
-    (emacs.override { nativeComp = true; })
+    (import ./emacs.nix { inherit pkgs; }) # X-only
+    # (emacs.override { nativeComp = true; })
     evince # X and wayland
     fbreader # X only. Binary is called "FBReader"
-    fd # for doomemacs
+    ffmpeg
     firefox # X and wayland
     font-awesome
     # fzf
@@ -138,7 +138,8 @@ with pkgs;
     lm_sensors
     lsof
     lshw
-    lua53Packages.dkjson # for textadept lsp module
+    lua
+    lua52Packages.luacheck
     # lxqt.qterminal # X and wayland
     meld # X and wayland
     memtester
@@ -167,8 +168,6 @@ with pkgs;
     qpdfview # X and wayland
     qtile # X and wayland
     # retext # markdown editor
-    ripgrep # for doomemacs
-    shellcheck # for doomemacs
     signal-desktop # X-only
     slurp # wayland only, region selector
     spaceship-prompt
@@ -186,18 +185,19 @@ with pkgs;
     usbutils
     # vistafonts # True-type fonts from MS Windows
     vlc # X-only until I set QT environment
-    (import ./vscodium.nix { inherit pkgs; }) # X-only? X and Wayland?
     wacomtablet
     waybar # wayland only
     # wayland-scanner
     # wayland-utils
     # wayland-protocols
     wev # X and wayland, installed with sway by default
+    wf-recorder # wayland only
     wget
     wl-clipboard
     wl-color-picker # wayland only
     wlr-randr
     wpa_supplicant
+    # wshowkeys # wayland only
     # xf86_input_wacom
     xournal # X and wayland
     xwayland

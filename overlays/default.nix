@@ -1,5 +1,5 @@
 final: prev: {
-  jot = final.haskellPackages.callPackage ./jot {};
+  amy-jot = final.haskellPackages.callPackage ./jot {};
   pandoc-linear-table = final.haskellPackages.callPackage ./pandoc-linear-table {};
   pandoc-logic-proof = final.haskellPackages.callPackage ./pandoc-logic-proof {};
   pandoc-columns = final.haskellPackages.callPackage ./pandoc-columns {};

@@ -14,29 +14,30 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/5a30dcbe-5831-4ad4-b96a-8505e77d1349";
+    { device = "/dev/disk/by-uuid/0e4bb44a-399f-495e-88ec-2173b1cd84de";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/55B1-5682";
+    { device = "/dev/disk/by-uuid/6616-A59D";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/6c425db3-4860-4bc0-914d-9e274806c601"; }
+    [ { device = "/dev/disk/by-uuid/4abc06eb-2d69-4edd-bf21-ee698ed52291"; }
     ];
 
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = lib.mkDefault false;
-  networking.interfaces.docker0.useDHCP = lib.mkDefault true;
-  networking.interfaces.enp67s0.useDHCP = lib.mkDefault true;
-  networking.interfaces.enp68s0.useDHCP = lib.mkDefault true;
-  networking.interfaces.ve-flake-test.useDHCP = lib.mkDefault true;
-  networking.interfaces.wlo2.useDHCP = lib.mkDefault true;
+  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
+  # (the default) this is the recommended approach. When using systemd-networkd it's
+  # still possible to use this option, but it's recommended to use it in conjunction
+  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp67s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp68s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlo2.useDHCP = lib.mkDefault true;
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   # high-resolution display
   hardware.video.hidpi.enable = lib.mkDefault true;

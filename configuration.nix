@@ -16,4 +16,3 @@ in
       ./vmware.nix
     ];
 }
-

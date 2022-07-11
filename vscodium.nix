@@ -12,7 +12,9 @@ let
       # vspacecode.vspacecode
       bbenoist.nix
       ms-python.python
-      # vspacecode.whichkey
+      johnpapa.vscode-peacock
+      vspacecode.whichkey
+      # michaelgriscom.leader-mode
       # ms-azuretools.vscode-docker
       haskell.haskell
       justusadam.language-haskell
