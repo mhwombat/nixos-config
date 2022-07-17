@@ -79,6 +79,7 @@ with pkgs;
     gnutls
     gparted # X and wayland?
     graphviz
+    grim
     hardinfo
     haskell-language-server
     # haskellPackages.brittany # for language server
@@ -140,6 +141,7 @@ with pkgs;
     lshw
     lua
     lua52Packages.luacheck
+    lua52Packages.lua-lsp
     # lxqt.qterminal # X and wayland
     meld # X and wayland
     memtester
@@ -165,9 +167,11 @@ with pkgs;
     # pup # for parsing HTML
     python
     # python3Env
+    python-language-server
     qpdfview # X and wayland
     qtile # X and wayland
     # retext # markdown editor
+    selene
     signal-desktop # X-only
     slurp # wayland only, region selector
     spaceship-prompt
