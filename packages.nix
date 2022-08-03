@@ -52,7 +52,7 @@ with pkgs;
     (import ./emacs.nix { inherit pkgs; }) # X-only
     # (emacs.override { nativeComp = true; })
     evince # X and wayland
-    fbreader # X only. Binary is called "FBReader"
+    # fbreader # X only. Binary is called "FBReader"
     ffmpeg
     firefox # X and wayland
     font-awesome
@@ -65,9 +65,8 @@ with pkgs;
     git-crypt
     # (gitit.override { pluginSupport = true; })
     git-lfs
-    globalprotect-openconnect
     gimp # Current version is X-only. Newer versions support wayland
-    # globalprotect-openconnect
+    globalprotect-openconnect
     gmp # GNU multiple precision arithmetic library
     # gnome3.adwaita-icon-theme # to help meld?
     gnome3.dconf-editor # X and wayland
@@ -148,6 +147,7 @@ with pkgs;
     mkpasswd
     mustache-go
     ncompress
+    nerdfonts
     nix-index # provides nix-locate
     nix-prefetch-git
     # nixos-generators
@@ -156,6 +156,7 @@ with pkgs;
     offlineimap
     onedrive
     openssl
+    openconnect
     # opera # X and wayland, invoke with opera --enable-features=UseOzonePlatform --ozone-platform=wayland %U
     ormolu
     p7zip
@@ -167,9 +168,10 @@ with pkgs;
     # pup # for parsing HTML
     python
     # python3Env
-    python-language-server
+    # python-language-server
     qpdfview # X and wayland
     qtile # X and wayland
+    recoll
     # retext # markdown editor
     selene
     signal-desktop # X-only
@@ -197,6 +199,7 @@ with pkgs;
     wev # X and wayland, installed with sway by default
     wf-recorder # wayland only
     wget
+    wkhtmltopdf
     wl-clipboard
     wl-color-picker # wayland only
     wlr-randr
