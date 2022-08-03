@@ -33,5 +33,6 @@
   hardware.sane.netConf = "192.168.178.29";
 
   # OneDrive
-  services.onedrive.enable=true;
+  # don't run it automatically
+  services.onedrive.enable=false;
 }
