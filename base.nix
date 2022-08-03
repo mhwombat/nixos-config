@@ -17,7 +17,6 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-
   # Enable the OpenSSH server.
   services.sshd.enable = true;
 
@@ -28,11 +27,38 @@
   # # enable wshowkeys
   # programs.wshowkeys.enable = true;
   
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
 
   # These variables end up in /etc/set-environment.
   # They may not take effect until you log out and back in again.
   environment.variables = import ./environment-variables.nix;
+
+#   systemd.services.nginx.serviceConfig.ReadWritePaths = [ "/var/spool/nginx/logs/" ];
+#   services.nginx = {
+#     enable = true;
+#     virtualHosts."localhost" = {
+#       addSSL = false;
+#       root = "/www";
+#     };
+#   };
+
+#   systemd.services.lighttpd.path = with pkgs; [ pandoc ];
+#   services.lighttpd = {
+#     enable = true;
+#     port = 3000;
+#     document-root = "/www";
+#     enableModules = [ "mod_auth" "mod_cgi" "mod_rewrite" ];
+#     mod_status = true;
+#     extraConfig = ''
+#         url.rewrite-once = ( "^/maths/(.+)" => "/cgi-bin/md2html?$1" )
+#         
+#         $HTTP["url"] =~ "/cgi-bin/" {
+#         	cgi.assign = ( "" => "" )
+#         }
+#         
+#         debug.log-request-handling = "enable"    
+#       '';
+#   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.amy = {
@@ -41,8 +67,8 @@
     description = "Amy de Buitleir";
     extraGroups = [ "wheel" "networkmanager" "vboxsf" "docker" "audio" ];
     uid = 1000;
-    shell = pkgs.zsh;
-    # shell = pkgs.bashInteractive;
+    # shell = pkgs.zsh;
+    shell = pkgs.bashInteractive;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
