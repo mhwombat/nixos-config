@@ -1,5 +1,5 @@
 final: prev: {
-#  textadept = final.callPackage ./textadept {};
+  maths-web = final.callPackage ./maths-web {};
   amy-jot = final.haskellPackages.callPackage ./jot {};
   pandoc-linear-table = final.haskellPackages.callPackage ./pandoc-linear-table {};
   pandoc-logic-proof = final.haskellPackages.callPackage ./pandoc-logic-proof {};
