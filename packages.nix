@@ -15,6 +15,7 @@ with pkgs;
   environment.systemPackages = [
     # My custom packages
     pkgs.amy-jot
+    pkgs.maths-web
     # pkgs.pandoc-linear-table
     # pkgs.pandoc-logic-proof
     # pkgs.pandoc-columns
@@ -119,7 +120,7 @@ with pkgs;
     imv
     inetutils # provides telnet
     inkscape # X and wayland
-    ispell
+#    ispell
     jq # used by my sway-tree-launcher
     kakoune
     kdiff3
@@ -196,6 +197,7 @@ with pkgs;
     # wayland-scanner
     # wayland-utils
     # wayland-protocols
+    wdiff
     wev # X and wayland, installed with sway by default
     wf-recorder # wayland only
     wget
