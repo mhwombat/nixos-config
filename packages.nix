@@ -13,15 +13,19 @@ with pkgs;
 
   # Packages I want to use
   environment.systemPackages = [
+    #
     # My custom packages
+    #
     pkgs.amy-jot
-    pkgs.maths-web
+    # pkgs.pandoc-maths-web
     # pkgs.pandoc-linear-table
     # pkgs.pandoc-logic-proof
     # pkgs.pandoc-columns
     # pkgs.pandoc-select-code
+    #
     # Standard packages
-    alacritty # X and wayland
+    #
+    # alacritty # X and wayland
     aspell
     aspellDicts.en
     aspellDicts.en-computers
@@ -34,33 +38,34 @@ with pkgs;
     bibutils
     bind # for dig
     binutils-unwrapped
-    # busybox overwrites realpath!
+    # busybox DON'T USE! Overwrites realpath!
     # cabal2nix
-    cabal-install
-    cage # wayland, provides Xwayland to qtile
+    # cabal-install
+    # cage # wayland, provides Xwayland to qtile
     chromium # X-only? See ozone?
     # clipman
     csvkit
     # curl
     dialog
-    diff-pdf
-    diffpdf
+    # diff-pdf
+    # diffpdf
     direnv
     dmidecode # system hardware info
     dos2unix
     # (dwl.override { conf = /home/amy/.config/dwl/config.h; enable-xwayland = true; })
     # dzen2
-    (import ./emacs.nix { inherit pkgs; }) # X-only
+    # (import ./emacs.nix { inherit pkgs; }) # X-only
     # (emacs.override { nativeComp = true; })
     evince # X and wayland
     # fbreader # X only. Binary is called "FBReader"
     ffmpeg
     firefox # X and wayland
     font-awesome
+    foot
     # fzf
     # fzy
-    gcc
-    ghc
+    # gcc
+    # ghc
     # ghostscript # for pdf2dsc
     gitAndTools.gitFull
     git-crypt
@@ -83,49 +88,50 @@ with pkgs;
     hardinfo
     haskell-language-server
     # haskellPackages.brittany # for language server
-    haskellPackages.citeproc
+    # haskellPackages.citeproc
     # haskellPackages.doi # broken as of 21.05
-    haskellPackages.floskell # for language server
-    haskellPackages.fourmolu # for language server
-    haskellPackages.ghcide # for language server
-    haskellPackages.haskell-language-server
-    haskellPackages.hasktags
-    haskellPackages.hlint
+    # haskellPackages.floskell # for language server
+    # haskellPackages.fourmolu # for language server
+    # haskellPackages.ghcide # for language server
+    # haskellPackages.haskell-language-server
+    # haskellPackages.hasktags
+    # haskellPackages.hlint
     # haskellPackages.hls-brittany-plugin # for language server
     haskellPackages.hls-call-hierarchy-plugin # for language server
     haskellPackages.hls-class-plugin # for language server
     haskellPackages.hls-eval-plugin # for language server
-    haskellPackages.hls-floskell-plugin # for language server
-    haskellPackages.hls-fourmolu-plugin # for language server
+    # haskellPackages.hls-floskell-plugin # for language server
+    # haskellPackages.hls-fourmolu-plugin # for language server
     haskellPackages.hls-haddock-comments-plugin # for language server
     haskellPackages.hls-hlint-plugin # for language server
-    haskellPackages.hls-ormolu-plugin # for language server
+    # haskellPackages.hls-ormolu-plugin # for language server
     haskellPackages.hls-pragmas-plugin # for language server
     haskellPackages.hls-stylish-haskell-plugin # for language server
     haskellPackages.hls-tactics-plugin # for language server
     # haskellPackages.ihaskell
-    haskellPackages.ormolu
-    haskellPackages.pandoc
+    # haskellPackages.ormolu
+    # haskellPackages.pandoc
     # haskellPackages.pandoc-citeproc # Deprecated in favour of haskellPackages.citeproc
-    haskellPackages.pandoc-crossref
+    # haskellPackages.pandoc-crossref
     # haskellPackages.pandoc-filter-graphviz # broken as of 21.11?
-    haskellPackages.pandoc-types
+    # haskellPackages.pandoc-types
     # haskellPackages.pandoc-include # broken as of 21.05
-    # haskellPackages.stylish-cabal # for language server
-    haskellPackages.stylish-haskell # for language server
-    helix
-    hplip
-    hplipWithPlugin
+    # haskellPackages.stylish-cabal # for language server # broken as of 22.05
+    # haskellPackages.stylish-haskell # for language server
+    # helix
+    hlint
+    # hplip
+    # hplipWithPlugin
     imagemagick
     imv
     inetutils # provides telnet
     inkscape # X and wayland
-#    ispell
+    # ispell
     jq # used by my sway-tree-launcher
-    kakoune
+    # kakoune
     kdiff3
     killall
-    kitty # X and wayland
+    # kitty # X and wayland
     lftp
     libertine
     libreoffice # X and wayland
@@ -134,8 +140,8 @@ with pkgs;
     libsForQt5.spectacle # Buggy on wayland # replaced ksnapshot
     libsForQt512.kcolorpicker
     libwacom
-    libxml2 # for xmllint
-    liquidprompt
+    # libxml2 # for xmllint
+    # liquidprompt
     lm_sensors
     lsof
     lshw
@@ -159,7 +165,7 @@ with pkgs;
     openssl
     openconnect
     # opera # X and wayland, invoke with opera --enable-features=UseOzonePlatform --ozone-platform=wayland %U
-    ormolu
+    # ormolu
     p7zip
     pandoc
     pdfgrep
@@ -174,10 +180,10 @@ with pkgs;
     qtile # X and wayland
     recoll
     # retext # markdown editor
-    selene
+    # selene
     signal-desktop # X-only
     slurp # wayland only, region selector
-    spaceship-prompt
+    # spaceship-prompt
     starship
     # stylish-cabal
     stylish-haskell
@@ -213,6 +219,6 @@ with pkgs;
     yad
     zbar # for reading QR codes
     zip
-    zsh
+    # zsh
   ];
 }
