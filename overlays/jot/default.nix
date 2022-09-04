@@ -1,4 +1,4 @@
-{ mkDerivation, base, cmdargs, directory, fetchgit, filepath
+{ mkDerivation, base, cabal-install, cmdargs, directory, fetchgit, filepath
 , process, lib, time
 }:
 mkDerivation {
