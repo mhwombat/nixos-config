@@ -39,47 +39,27 @@ with pkgs;
     bind # for dig
     binutils-unwrapped
     # busybox DON'T USE! Overwrites realpath!
-    # cabal2nix
-    # cabal-install
-    # cage # wayland, provides Xwayland to qtile
     chromium # X-only? See ozone?
-    # clipman
     csvkit
     # curl
     dialog
-    # diff-pdf
-    # diffpdf
     direnv
     dmidecode # system hardware info
     dos2unix
-    # (dwl.override { conf = /home/amy/.config/dwl/config.h; enable-xwayland = true; })
-    # dzen2
-    # (import ./emacs.nix { inherit pkgs; }) # X-only
-    # (emacs.override { nativeComp = true; })
-    evince # X and wayland
-    # fbreader # X only. Binary is called "FBReader"
     ffmpeg
     firefox # X and wayland
     font-awesome
     foot
-    # fzf
-    # fzy
-    # gcc
-    # ghc
-    # ghostscript # for pdf2dsc
     gitAndTools.gitFull
     git-crypt
-    # (gitit.override { pluginSupport = true; })
     git-lfs
     gimp # Current version is X-only. Newer versions support wayland
     globalprotect-openconnect
     gmp # GNU multiple precision arithmetic library
-    # gnome3.adwaita-icon-theme # to help meld?
     gnome3.dconf-editor # X and wayland
     gnome3.eog # X and wayland
     gnome3.gnome-disk-utility # X and wayland
     gnome3.gucharmap # X and wayland
-    # gnome3.gnome-themes-extra # to fix "adwaita" bug
     gnumake
     gnutls
     gparted # X and wayland?
@@ -118,20 +98,14 @@ with pkgs;
     # haskellPackages.pandoc-include # broken as of 21.05
     # haskellPackages.stylish-cabal # for language server # broken as of 22.05
     # haskellPackages.stylish-haskell # for language server
-    # helix
     hlint
-    # hplip
-    # hplipWithPlugin
     imagemagick
     imv
     inetutils # provides telnet
     inkscape # X and wayland
-    # ispell
     jq # used by my sway-tree-launcher
-    # kakoune
     kdiff3
     killall
-    # kitty # X and wayland
     lftp
     libertine
     libreoffice # X and wayland
@@ -140,15 +114,12 @@ with pkgs;
     libsForQt5.spectacle # Buggy on wayland # replaced ksnapshot
     libsForQt512.kcolorpicker
     libwacom
-    # libxml2 # for xmllint
-    # liquidprompt
     lm_sensors
     lsof
     lshw
     lua
     lua52Packages.luacheck
     lua52Packages.lua-lsp
-    # lxqt.qterminal # X and wayland
     meld # X and wayland
     memtester
     mkpasswd
@@ -157,39 +128,25 @@ with pkgs;
     nerdfonts
     nix-index # provides nix-locate
     nix-prefetch-git
-    # nixos-generators
-    # nodePackages.sloc
-    # obsidian
     offlineimap
     onedrive
     openssl
     openconnect
-    # opera # X and wayland, invoke with opera --enable-features=UseOzonePlatform --ozone-platform=wayland %U
-    # ormolu
     p7zip
     pandoc
     pdfgrep
     pdftk
     # podman enabled in containers.nix
     poppler_utils # for pdfinfo
-    # pup # for parsing HTML
     python
-    # python3Env
-    # python-language-server
     qpdfview # X and wayland
     qtile # X and wayland
     recoll
-    # retext # markdown editor
-    # selene
     signal-desktop # X-only
     slurp # wayland only, region selector
-    # spaceship-prompt
     starship
-    # stylish-cabal
     stylish-haskell
     # sway enabled in wayland.nix
-    # sxiv # X-only
-    # tabula # extract tables from PDF files
     texlive.combined.scheme-full
     textadept
     tree
@@ -200,9 +157,6 @@ with pkgs;
     vlc # X-only until I set QT environment
     wacomtablet
     waybar # wayland only
-    # wayland-scanner
-    # wayland-utils
-    # wayland-protocols
     wdiff
     wev # X and wayland, installed with sway by default
     wf-recorder # wayland only
@@ -212,13 +166,11 @@ with pkgs;
     wl-color-picker # wayland only
     wlr-randr
     wpa_supplicant
-    # wshowkeys # wayland only
     # xf86_input_wacom
     xournal # X and wayland
     xwayland
     yad
     zbar # for reading QR codes
     zip
-    # zsh
   ];
 }
