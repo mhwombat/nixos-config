@@ -56,10 +56,10 @@ with pkgs;
     gimp # Current version is X-only. Newer versions support wayland
     globalprotect-openconnect
     gmp # GNU multiple precision arithmetic library
-    gnome3.dconf-editor # X and wayland
-    gnome3.eog # X and wayland
-    gnome3.gnome-disk-utility # X and wayland
-    gnome3.gucharmap # X and wayland
+    gnome.dconf-editor # X and wayland
+    gnome.eog # X and wayland
+    gnome.gnome-disk-utility # X and wayland
+    gnome.gucharmap # X and wayland
     gnumake
     gnutls
     gparted # X and wayland?
