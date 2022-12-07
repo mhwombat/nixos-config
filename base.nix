@@ -26,39 +26,12 @@
 
   # # enable wshowkeys
   # programs.wshowkeys.enable = true;
-  
+
   # programs.zsh.enable = true;
 
   # These variables end up in /etc/set-environment.
   # They may not take effect until you log out and back in again.
   environment.variables = import ./environment-variables.nix;
-
-#   systemd.services.nginx.serviceConfig.ReadWritePaths = [ "/var/spool/nginx/logs/" ];
-#   services.nginx = {
-#     enable = true;
-#     virtualHosts."localhost" = {
-#       addSSL = false;
-#       root = "/www";
-#     };
-#   };
-
-#   systemd.services.lighttpd.path = with pkgs; [ pandoc ];
-#   services.lighttpd = {
-#     enable = true;
-#     port = 3000;
-#     document-root = "/www";
-#     enableModules = [ "mod_auth" "mod_cgi" "mod_rewrite" ];
-#     mod_status = true;
-#     extraConfig = ''
-#         url.rewrite-once = ( "^/maths/(.+)" => "/cgi-bin/md2html?$1" )
-#         
-#         $HTTP["url"] =~ "/cgi-bin/" {
-#         	cgi.assign = ( "" => "" )
-#         }
-#         
-#         debug.log-request-handling = "enable"    
-#       '';
-#   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.amy = {
@@ -84,6 +57,14 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  # Enable a periodically executed systemd service named nixos-upgrade.service.
+  # If the allowReboot option is false, it runs nixos-rebuild switch --upgrade.
+  # If allowReboot is true, then the system will automatically reboot if the new generation contains a different kernel, initrd or kernel modules.
+  # To see when the service runs, see systemctl list-timers.
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = false;
+  system.autoUpgrade.channel = https://nixos.org/channels/nixos-unstable;
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
