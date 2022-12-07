@@ -7,9 +7,9 @@
 
   networking = {
     hostName = "wombat11k";
- # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+    # Pick only one of the below networking options.
+    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
     interfaces = {
       enp67s0.useDHCP = true;
@@ -25,12 +25,6 @@
       };
     };
   };
-
-  # Printer
-  services.printing.drivers = [ pkgs.hplipWithPlugin ];
-
-  # Scanner
-  hardware.sane.netConf = "192.168.178.29";
 
   # OneDrive
   # don't run it automatically
