@@ -17,6 +17,8 @@ with pkgs;
     # My custom packages
     #
     pkgs.amy-jot
+    pkgs.amy-textadept
+#    (builtins.getFlake git+https://codeberg.org/mhwombat/hello-flake)
     # pkgs.pandoc-maths-web
     # pkgs.pandoc-linear-table
     # pkgs.pandoc-logic-proof
@@ -26,32 +28,30 @@ with pkgs;
     # Standard packages
     #
     # alacritty # X and wayland
-###    aspell
-###    aspellDicts.en
-###    aspellDicts.en-computers
-###    aspellDicts.en-science
+    aspell
+    aspellDicts.en
+    aspellDicts.en-computers
+    aspellDicts.en-science
     autotiling  # used by my sway config
-###    bash
     bemenu # used by my sway config
 ###    bind # for dig
 ###    binutils-unwrapped
 ###    # busybox DON'T USE! Overwrites realpath!
 ###    chromium # X-only? See ozone?
 ###    csvkit
-###    # curl
 ###    dialog
     direnv
 ###    dmidecode # system hardware info
 ###    dos2unix
 ###    ffmpeg
     firefox # X and wayland
-###    font-awesome
+    font-awesome # used by waybar
     foot # used by my sway config
     gitAndTools.gitFull
     git-crypt
     git-lfs
-###    gimp # Current version is X-only. Newer versions support wayland
-###    globalprotect-openconnect
+    gimp # X and wayland
+    globalprotect-openconnect # provides gpclient
 ###    gmp # GNU multiple precision arithmetic library
 ###    gnome.dconf-editor # X and wayland
 ###    gnome.eog # X and wayland
@@ -62,73 +62,45 @@ with pkgs;
 ###    gparted # X and wayland?
 ###    grim
 ###    hardinfo
-###    haskell-language-server
-###    # haskellPackages.brittany # for language server
-###    # haskellPackages.citeproc
-###    # haskellPackages.doi # broken as of 21.05
-###    # haskellPackages.floskell # for language server
-###    # haskellPackages.fourmolu # for language server
-###    # haskellPackages.ghcide # for language server
-###    # haskellPackages.haskell-language-server
-###    # haskellPackages.hasktags
-###    # haskellPackages.hlint
-###    # haskellPackages.hls-brittany-plugin # for language server
+    haskell-language-server
 ###    haskellPackages.hls-call-hierarchy-plugin # for language server
 ###    haskellPackages.hls-class-plugin # for language server
 ###    haskellPackages.hls-eval-plugin # for language server
-###    # haskellPackages.hls-floskell-plugin # for language server
-###    # haskellPackages.hls-fourmolu-plugin # for language server
 ###    haskellPackages.hls-haddock-comments-plugin # for language server
 ###    haskellPackages.hls-hlint-plugin # for language server
-###    # haskellPackages.hls-ormolu-plugin # for language server
 ###    haskellPackages.hls-pragmas-plugin # for language server
 ###    haskellPackages.hls-stylish-haskell-plugin # for language server
 ###    haskellPackages.hls-tactics-plugin # for language server
-###    # haskellPackages.ihaskell
-###    # haskellPackages.ormolu
-###    # haskellPackages.pandoc
-###    # haskellPackages.pandoc-citeproc # Deprecated in favour of haskellPackages.citeproc
-###    # haskellPackages.pandoc-crossref
-###    # haskellPackages.pandoc-filter-graphviz # broken as of 21.11?
-###    # haskellPackages.pandoc-types
-###    # haskellPackages.pandoc-include # broken as of 21.05
-###    # haskellPackages.stylish-cabal # for language server # broken as of 22.05
-###    # haskellPackages.stylish-haskell # for language server
 ###    hlint
-###    imagemagick
+    imagemagick
     imv
 ###    inetutils # provides telnet
-###    inkscape # X and wayland
-###    jq # used by my sway-tree-launcher
-###    kdiff3
+    inkscape # X and wayland
+###    jq # used by my sway-tree-launcher, but do I still use that?
 ###    killall
 ###    lftp
-###    libertine
-    # libreoffice # X and wayland BROKEN
+    libreoffice # X and wayland
 ###    librsvg # for including SVG in PDF
 ###    libsForQt5.okular
 ###    libsForQt5.spectacle # Buggy on wayland # replaced ksnapshot
 ###    libsForQt512.kcolorpicker
-###    libwacom
+###    libwacom # graphics tablet works fine without this
 ###    lm_sensors
 ###    lsof
 ###    lshw
 ###    lua
 ###    lua52Packages.luacheck
-###    lua52Packages.lua-lsp
+    lua52Packages.lua-lsp
     meld # X and wayland
 ###    memtester
 ###    mkpasswd
 ###    ncompress
 ###    nerdfonts
+       nix-direnv
 ###    nix-index # provides nix-locate
 ###    nix-prefetch-git
-###    offlineimap
-###    onedrive
-###    openssl
-###    openconnect
+    onedrive
 ###    p7zip
-###    pandoc
 ###    pdfgrep
 ###    pdftk
     # podman enabled in containers.nix
@@ -142,29 +114,25 @@ with pkgs;
     starship
 ###    stylish-haskell
     # sway enabled in wayland.nix
-    textadept
+#    textadept
     tree
 ###    unrar
-###    unzip
+    unzip
 ###    usbutils
     # vistafonts # True-type fonts from MS Windows
 ###    vlc # X-only until I set QT environment
-###    wacomtablet
+###    wacomtablet # graphics tablet works fine without this
     waybar # wayland only # used by my sway config (instead of swaybar)
     wdiff
-###    wev # X and wayland, installed with sway by default
+    # wev # X and wayland, installed with sway by default
 ###    wf-recorder # wayland only
 ###    wget
     # wkhtmltopdf # depends on qtwebkit, which is broken as of 2022-11-30
     wl-clipboard # used by my sway config
-###    wl-color-picker # wayland only
-###    wlr-randr
-###    wpa_supplicant
-    # xf86_input_wacom
-###    xournal # X and wayland
+    # xf86_input_wacom # graphics tablet works fine without this
 ###    xwayland
 ###    yad
 ###    zbar # for reading QR codes
-###    zip
+    zip
   ];
 }
