@@ -37,7 +37,7 @@ with pkgs;
 ###    bind # for dig
 ###    binutils-unwrapped
 ###    # busybox DON'T USE! Overwrites realpath!
-###    chromium # X-only? See ozone?
+    chromium # X-only? See ozone?
 ###    csvkit
 ###    dialog
     direnv
@@ -47,6 +47,7 @@ with pkgs;
     firefox # X and wayland
     font-awesome # used by waybar
     foot # used by my sway config
+    ghc
     gitAndTools.gitFull
     git-crypt
     git-lfs
@@ -62,14 +63,14 @@ with pkgs;
 ###    gparted # X and wayland?
 ###    grim
 ###    hardinfo
-    haskell-language-server
+       haskellPackages.haskell-language-server
 ###    haskellPackages.hls-call-hierarchy-plugin # for language server
 ###    haskellPackages.hls-class-plugin # for language server
 ###    haskellPackages.hls-eval-plugin # for language server
 ###    haskellPackages.hls-haddock-comments-plugin # for language server
 ###    haskellPackages.hls-hlint-plugin # for language server
 ###    haskellPackages.hls-pragmas-plugin # for language server
-###    haskellPackages.hls-stylish-haskell-plugin # for language server
+    haskellPackages.hls-stylish-haskell-plugin # for language server
 ###    haskellPackages.hls-tactics-plugin # for language server
 ###    hlint
     imagemagick
@@ -90,7 +91,7 @@ with pkgs;
 ###    lshw
 ###    lua
 ###    lua52Packages.luacheck
-    lua52Packages.lua-lsp
+    lua53Packages.lua-lsp
     meld # X and wayland
 ###    memtester
 ###    mkpasswd
@@ -101,6 +102,7 @@ with pkgs;
 ###    nix-prefetch-git
     onedrive
 ###    p7zip
+    pandoc
 ###    pdfgrep
 ###    pdftk
     # podman enabled in containers.nix
@@ -114,11 +116,14 @@ with pkgs;
     starship
 ###    stylish-haskell
     # sway enabled in wayland.nix
+    texlive.combined.scheme-full
 #    textadept
     tree
 ###    unrar
     unzip
 ###    usbutils
+    via
+    vial
     # vistafonts # True-type fonts from MS Windows
 ###    vlc # X-only until I set QT environment
 ###    wacomtablet # graphics tablet works fine without this
