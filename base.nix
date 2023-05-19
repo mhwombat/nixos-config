@@ -24,6 +24,9 @@
   nix.package = pkgs.nixUnstable;
   nix.extraOptions = "experimental-features = nix-command flakes";
 
+  # Support for configurable keyboard
+  services.udev.packages = with pkgs; [ vial via ];
+
   # # enable wshowkeys
   # programs.wshowkeys.enable = true;
 
@@ -38,7 +41,7 @@
     isNormalUser = true;
     home = "/home/amy";
     description = "Amy de Buitleir";
-    extraGroups = [ "wheel" "networkmanager" "vboxsf" "docker" "audio" ];
+    extraGroups = [ "wheel" "networkmanager" "vboxsf" "docker" "audio" "dialout" ];
     uid = 1000;
     # shell = pkgs.zsh;
     shell = pkgs.bashInteractive;
