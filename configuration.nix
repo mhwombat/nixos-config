@@ -8,10 +8,11 @@ in
       ./hardware-configuration.nix
       (./. + "/${hostname}.nix")
       ./base.nix
+      ./sound.nix
+      ./printers.nix
       ./locale.nix
       ./xserver.nix
       ./wayland.nix
-      ./containers.nix
       ./packages.nix
       ./vmware.nix
     ];
