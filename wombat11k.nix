@@ -1,21 +1,22 @@
 { config, pkgs, ... }:
 
 {
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   networking = {
     hostName = "wombat11k";
-    # Pick only one of the below networking options.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
     interfaces = {
       enp67s0.useDHCP = true;
       enp68s0.useDHCP = true;
       wlo2.useDHCP = true;
     };
+
+    networkmanager.enable = false; # can't use with networking.wireless
 
     wireless = {
       enable = true;  # Enables wireless support via wpa_supplicant.
@@ -29,4 +30,5 @@
   # OneDrive
   # don't run it automatically
   services.onedrive.enable=false;
+
 }
