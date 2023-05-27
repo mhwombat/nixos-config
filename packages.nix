@@ -109,7 +109,7 @@ with pkgs;
 ###    poppler_utils # for pdfinfo
     # python
 ###    qpdfview # X and wayland
-###    qtile # X and wayland
+    qtile # X and wayland
 ###    recoll
     signal-desktop # X-only
 ###    slurp # wayland only, region selector
