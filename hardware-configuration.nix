@@ -28,6 +28,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/ocz-vertex" =
+    { device = "/dev/disk/by-uuid/2a20586c-0db0-4bdb-9937-d8e883b5ccaf";
+      fsType = "ext4";
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

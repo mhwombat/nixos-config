@@ -13,6 +13,7 @@ in
       ./locale.nix
       ./xserver.nix
       ./wayland.nix
+      ./containers.nix
       ./packages.nix
       ./vmware.nix
     ];
