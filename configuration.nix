@@ -15,6 +15,7 @@ in
       ./wayland.nix
       ./containers.nix
       ./packages.nix
+      ./schedule.nix
       ./vmware.nix
     ];
 }
