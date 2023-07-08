@@ -62,6 +62,7 @@ with pkgs;
     # podman enabled in containers.nix
     # python
     qtile # X and wayland
+    remind
     signal-desktop # X-only
     starship
     # sway enabled in wayland.nix
