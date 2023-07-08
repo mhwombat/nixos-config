@@ -14,22 +14,17 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/86e6fc84-0b58-4df8-b289-78c8bc43a6cb";
+    { device = "/dev/disk/by-uuid/06d199a6-09bb-4572-9e35-bdb9972c72e2";
       fsType = "ext4";
     };
 
   fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/1CF3-1005";
+    { device = "/dev/disk/by-uuid/F921-5F68";
       fsType = "vfat";
     };
 
   fileSystems."/home/amy" =
     { device = "/dev/disk/by-label/burrow";
-      fsType = "ext4";
-    };
-
-  fileSystems."/ocz-vertex" =
-    { device = "/dev/disk/by-uuid/2a20586c-0db0-4bdb-9937-d8e883b5ccaf";
       fsType = "ext4";
     };
 
@@ -47,5 +42,5 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   # high-resolution display
-  hardware.video.hidpi.enable = lib.mkDefault true;
+  # OBSOLETE hardware.video.hidpi.enable = lib.mkDefault true;
 }
