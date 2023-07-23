@@ -10,12 +10,12 @@ in
       ./base.nix
       ./sound.nix
       ./printers.nix
+      ./email.nix
       ./locale.nix
       ./xserver.nix
       ./wayland.nix
       ./containers.nix
       ./packages.nix
       ./schedule.nix
-      ./vmware.nix
     ];
 }
