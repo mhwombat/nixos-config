@@ -35,7 +35,7 @@ with pkgs;
       pkgs.offlineimap
     ];
     script = ''
-      ${pkgs.bash}/bin/bash /home/amy/kolab/sync
+      ${pkgs.bash}/bin/bash offlineimap
     '';
     serviceConfig = {
       Type = "oneshot";
