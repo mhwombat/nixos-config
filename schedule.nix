@@ -4,7 +4,7 @@
 #
 #   https://nixos.wiki/wiki/Systemd/Timers
 #   man systemd.timer   # general
-#   man systemd.timer   # time and date specification
+#   man systemd.time    # time and date specification
 #
 # List active timers and their current state:
 #
@@ -47,7 +47,7 @@ with pkgs;
   systemd.timers."email-reminders" = {
     wantedBy = [ "timers.target" ];
       timerConfig = {
-        OnCalendar = "daily";
+        OnCalendar = "01:00";
         Persistent = "true";
         Unit = "email-reminders.service";
       };
