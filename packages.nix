@@ -17,7 +17,7 @@ with pkgs;
     # My custom packages
     #
     pkgs.amy-jot
-    pkgs.amy-textadept
+    # pkgs.amy-textadept
     # (builtins.getFlake git+https://codeberg.org/mhwombat/hello-flake)
     # pkgs.pandoc-maths-web
     # pkgs.pandoc-linear-table
@@ -56,6 +56,7 @@ with pkgs;
     meld # X and wayland
     nix-direnv
     nix-index # provides nix-locate
+    notmuch
     okular
     # onedrive
     pandoc
@@ -67,7 +68,7 @@ with pkgs;
     starship
     # sway enabled in wayland.nix
     texlive.combined.scheme-full
-#    textadept
+    textadept
     tree
     unzip
     via
