@@ -18,7 +18,7 @@
   # They may not take effect until you log out and back in again.
   environment.variables = import ./environment-variables.nix;
 
-  # Enable the OpenSSH server.
+  # Enable the OpenSSH daemon.
   # services.sshd.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -37,6 +37,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "23.05"; # Did you read the comment?
 
 }
