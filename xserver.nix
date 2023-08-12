@@ -8,12 +8,9 @@
     layout = "ie";
     xkbVariant = "";
 
-    # Enable touchpad support (enabled default in most desktopManager).
-    # libinput.enable = true;
-
-    # Enable the Cinnamon Desktop Environment.
-    displayManager.lightdm.enable = true;
-    desktopManager.cinnamon.enable = true;
+    # Enable the GNOME Desktop Environment.
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
   };
 
 }
