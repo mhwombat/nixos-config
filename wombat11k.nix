@@ -2,10 +2,9 @@
 
 {
 
-  # Use the systemd-boot EFI boot loader.
+  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   networking = {
     hostName = "wombat11k";
@@ -26,9 +25,5 @@
       };
     };
   };
-
-  # OneDrive
-  # don't run it automatically
-  services.onedrive.enable=false;
 
 }
