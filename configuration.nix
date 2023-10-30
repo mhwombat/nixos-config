@@ -12,9 +12,9 @@ in
       ./printers.nix
       ./email.nix
       ./locale.nix
-      ./xserver.nix
+      # ./xserver.nix
       ./wayland.nix
-      ./containers.nix
+      # ./containers.nix
       ./packages.nix
       ./schedule.nix
     ];
