@@ -17,7 +17,7 @@ with pkgs;
     # My custom packages
     #
     pkgs.amy-jot
-    # pkgs.amy-textadept
+    pkgs.amy-textadept
     # (builtins.getFlake git+https://codeberg.org/mhwombat/hello-flake)
     # pkgs.pandoc-maths-web
     # pkgs.pandoc-linear-table
@@ -37,6 +37,7 @@ with pkgs;
     # busybox DON'T USE! Overwrites realpath!
     chromium # X-only? See ozone?
     direnv
+    # dolphin
     firefox # X and wayland
     font-awesome # used by waybar
     foot # used by my sway config
@@ -47,6 +48,7 @@ with pkgs;
     gimp # X and wayland
     # globalprotect-openconnect # provides gpclient
     gnumake
+    gnumeric
     haskellPackages.haskell-language-server
     haskellPackages.hls-stylish-haskell-plugin # for language server
     imagemagick
@@ -56,28 +58,31 @@ with pkgs;
     meld # X and wayland
     nix-direnv
     nix-index # provides nix-locate
+#    noson
     notmuch
     okular
     # onedrive
     pandoc
     # podman enabled in containers.nix
     # python
-    qtile # X and wayland
+    # qtile # X and wayland
     remind
     signal-desktop # X-only
     starship
     # sway enabled in wayland.nix
     texlive.combined.scheme-full
-    textadept
     tree
     unzip
-    via
-    vial
+    # via
+    # vial
     # vistafonts # True-type fonts from MS Windows
+    vlc
     waybar # wayland only # used by my sway config (instead of swaybar)
     wdiff
     # wev # X and wayland, installed with sway by default
     wl-clipboard # used by my sway config
+    xfce.thunar
+    xfce.tumbler
     zip
   ];
 }
