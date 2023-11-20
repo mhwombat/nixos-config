@@ -31,6 +31,13 @@
     shell = pkgs.bashInteractive;
   };
 
+#  # Automatic upgrades
+#  system.autoUpgrade = {
+#    enable = true;
+#    allowReboot = false; # Do nixos-rebuild switch --upgrade instead
+#    channel = "https://channels.nixos.org/nixos-unstable";
+#  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

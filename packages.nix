@@ -34,6 +34,7 @@ with pkgs;
     aspellDicts.en-science
     autotiling  # used by my sway config
     bemenu # used by my sway config
+    brave
     # busybox DON'T USE! Overwrites realpath!
     chromium # X-only? See ozone?
     direnv
@@ -41,7 +42,7 @@ with pkgs;
     firefox # X and wayland
     font-awesome # used by waybar
     foot # used by my sway config
-    ghc
+    # ghc
     gitAndTools.gitFull
     git-crypt
     git-lfs
