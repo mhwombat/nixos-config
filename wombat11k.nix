@@ -5,6 +5,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.memtest86.enable = true; # add memtest to boot menu
 
   networking = {
     hostName = "wombat11k";
