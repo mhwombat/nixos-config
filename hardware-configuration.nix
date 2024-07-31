@@ -14,19 +14,31 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
+<<<<<<< HEAD
     { device = "/dev/disk/by-uuid/eac2d4f3-e359-49f1-b9a8-9faae331b836";
+=======
+    { device = "/dev/disk/by-uuid/43ce7fe5-bc76-41d6-bcd7-82e132ba6bcb";
+>>>>>>> ac29118 (reinstall nixos)
       fsType = "btrfs";
       options = [ "subvol=root" ];
     };
 
   fileSystems."/nix" =
+<<<<<<< HEAD
     { device = "/dev/disk/by-uuid/eac2d4f3-e359-49f1-b9a8-9faae331b836";
+=======
+    { device = "/dev/disk/by-uuid/43ce7fe5-bc76-41d6-bcd7-82e132ba6bcb";
+>>>>>>> ac29118 (reinstall nixos)
       fsType = "btrfs";
       options = [ "subvol=nix" ];
     };
 
   fileSystems."/boot" =
+<<<<<<< HEAD
     { device = "/dev/nvme0n1p1";
+=======
+    { device = "/dev/disk/by-uuid/12CE-A600";
+>>>>>>> ac29118 (reinstall nixos)
       fsType = "vfat";
     };
 
