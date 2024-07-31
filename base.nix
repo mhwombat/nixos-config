@@ -8,7 +8,7 @@
   # nixpkgs.config.allowBroken = true;
 
   # Enable Nix flakes
-#  nix.package = pkgs.nixUnstable;
+  nix.package = pkgs.nixUnstable;
   nix.extraOptions = "experimental-features = nix-command flakes";
 
   # Support for configurable keyboard
