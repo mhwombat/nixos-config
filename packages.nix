@@ -31,7 +31,7 @@ with pkgs;
     aspell
     aspellDicts.en
     aspellDicts.en-computers
-    aspellDicts.en-science
+#    aspellDicts.en-science
     autotiling  # used by my sway config
     bemenu # used by my sway config
     brave
@@ -51,7 +51,7 @@ with pkgs;
     gnumake
     gnumeric
     haskellPackages.haskell-language-server
-    haskellPackages.hls-stylish-haskell-plugin # for language server
+#    haskellPackages.hls-stylish-haskell-plugin # for language server BROKEN on 2024-08-02
     imagemagick
     imv
     inkscape # X and wayland
@@ -68,6 +68,7 @@ with pkgs;
     # for podman, see containers.nix
     # python
     # qtile # X and wayland
+    recoll
     remind
     signal-desktop # X-only
     starship
