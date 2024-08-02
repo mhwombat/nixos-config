@@ -56,6 +56,7 @@ with pkgs;
     imv
     inkscape # X and wayland
     libreoffice # X and wayland
+    litemdview
     meld # X and wayland
     nix-direnv
     nix-index # provides nix-locate

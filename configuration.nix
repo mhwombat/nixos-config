@@ -16,6 +16,11 @@ in
       ./wayland.nix
       # ./containers.nix
       ./packages.nix
-      ./schedule.nix
+      #
+      # Scheduled services
+      #
+      ./scheduling/sync-email.nix
+      ./scheduling/email-reminders.nix
+      ./scheduling/recollindex.nix
     ];
 }
