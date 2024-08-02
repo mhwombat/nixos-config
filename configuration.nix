@@ -12,9 +12,7 @@ in
       ./printers.nix
       ./email.nix
       ./locale.nix
-      # ./xserver.nix
       ./wayland.nix
-      # ./containers.nix
       ./packages.nix
       #
       # Scheduled services
