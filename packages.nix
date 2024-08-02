@@ -64,7 +64,8 @@ with pkgs;
     okular
     # onedrive
     pandoc
-    # podman enabled in containers.nix
+    # pdfslicer
+    # for podman, see containers.nix
     # python
     # qtile # X and wayland
     remind

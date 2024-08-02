@@ -7,6 +7,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.memtest86.enable = true; # add memtest to boot menu
 
+  fileSystems."/home/amy" =
+    { device = "/dev/disk/by-label/burrow";
+      fsType = "ext4";
+    };
+
   networking = {
     hostName = "wombat11k";
 
