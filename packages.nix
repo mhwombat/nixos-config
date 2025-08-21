@@ -16,7 +16,7 @@ with pkgs;
     #
     # My custom packages
     #
-    pkgs.amy-jot
+    # pkgs.amy-jot
     pkgs.amy-textadept
     # (builtins.getFlake git+https://codeberg.org/mhwombat/hello-flake)
     # pkgs.pandoc-maths-web
@@ -42,7 +42,7 @@ with pkgs;
     firefox # X and wayland
     font-awesome # used by waybar
     foot # used by my sway config
-    # ghc
+    ghc # required for haskell-language-server
     gitAndTools.gitFull
     git-crypt
     git-lfs
@@ -55,6 +55,7 @@ with pkgs;
     imagemagick
     imv
     inkscape # X and wayland
+    kdePackages.okular
     libreoffice # X and wayland
     litemdview
     meld # X and wayland
@@ -62,7 +63,6 @@ with pkgs;
     nix-index # provides nix-locate
 #    noson
     notmuch
-    okular
     # onedrive
     pandoc
     # pdfslicer
@@ -74,6 +74,7 @@ with pkgs;
     signal-desktop # X-only
     starship
     # sway enabled in wayland.nix
+    # textadept
     texlive.combined.scheme-full
     tree
     unzip
@@ -88,5 +89,6 @@ with pkgs;
     xfce.thunar
     xfce.tumbler
     zip
+#    zoneminder
   ];
 }

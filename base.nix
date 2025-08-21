@@ -12,7 +12,7 @@
   nix.extraOptions = "experimental-features = nix-command flakes";
 
   # Support for configurable keyboard
-  services.udev.packages = with pkgs; [ vial via ];
+#  services.udev.packages = with pkgs; [ vial via ];
 
   # These variables end up in /etc/set-environment.
   # They may not take effect until you log out and back in again.
