@@ -49,7 +49,6 @@ with pkgs;
     gimp # X and wayland
     # globalprotect-openconnect # provides gpclient
     gnumake
-    gnumeric
     haskellPackages.haskell-language-server
 #    haskellPackages.hls-stylish-haskell-plugin # for language server BROKEN on 2024-08-02
     imagemagick
