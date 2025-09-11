@@ -1,7 +1,5 @@
-{ config, pkgs, ... }:
+{ config, pkgs, hostname, ... }:
 
-let hostname="wombat11k";
-in
 {
   imports =
     [ # Include the results of the hardware scan.

@@ -1,4 +1,4 @@
-{ config, pkgs, options, ... }:
+{ config, pkgs, options, inputs, ... }:
 
 with pkgs;
 {
@@ -7,9 +7,9 @@ with pkgs;
 ###    "python3.10-kerberos-1.3.1"
 ###  ];
 
-  nixpkgs.overlays = [
-    (import ./overlays/default.nix)
-  ];
+#  nixpkgs.overlays = [
+#    (import ./overlays/default.nix)
+#  ];
 
   # Packages I want to use
   environment.systemPackages = [
@@ -17,13 +17,8 @@ with pkgs;
     # My custom packages
     #
     # pkgs.amy-jot
-    pkgs.amy-textadept
-    # (builtins.getFlake git+https://codeberg.org/mhwombat/hello-flake)
-    # pkgs.pandoc-maths-web
-    # pkgs.pandoc-linear-table
-    # pkgs.pandoc-logic-proof
-    # pkgs.pandoc-columns
-    # pkgs.pandoc-select-code
+    # pkgs.amy-textadept
+    inputs.hello-flake.packages."${pkgs.system}".default
     #
     # Standard packages
     #
@@ -73,7 +68,7 @@ with pkgs;
     signal-desktop # X-only
     starship
     # sway enabled in wayland.nix
-    # textadept
+    textadept
     texlive.combined.scheme-full
     tree
     unzip
