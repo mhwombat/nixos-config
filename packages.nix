@@ -18,7 +18,7 @@ with pkgs;
     #
     # pkgs.amy-jot
     # pkgs.amy-textadept
-    inputs.hello-flake.packages."${pkgs.system}".default
+    # inputs.hello-flake.packages."${pkgs.system}".default
     #
     # Standard packages
     #
