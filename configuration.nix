@@ -5,16 +5,16 @@ let
 in
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       (./. + "/${hostname}-hardware-configuration.nix")
       (./. + "/${hostname}.nix")
       ./base.nix
       ./sound.nix
       ./printers.nix
 #      ./email.nix
-       ./locale.nix
+      ./locale.nix
 #      ./wayland.nix
-     ./packages.nix
+      ./packages.nix
       #
       # Scheduled services
       #

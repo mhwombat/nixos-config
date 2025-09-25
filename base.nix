@@ -23,12 +23,4 @@
     uid = 1000;
     shell = pkgs.bashInteractive;
   };
-
-#  # Automatic upgrades
-#  system.autoUpgrade = {
-#    enable = true;
-#    allowReboot = false; # Do nixos-rebuild switch --upgrade instead
-#    channel = "https://channels.nixos.org/nixos-unstable";
-#  };
-
 }
