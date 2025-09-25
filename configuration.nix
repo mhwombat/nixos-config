@@ -22,20 +22,4 @@ in
 #      ./scheduling/email-reminders.nix
 #      ./scheduling/recollindex.nix
     ];
-
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  # Enable the OpenSSH server.
-  services.sshd.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
 }
