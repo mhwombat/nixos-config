@@ -1,8 +1,5 @@
-{ config, pkgs, ... }:
+{ config, pkgs, hostname, ... }:
 
-let
-  hostname="sage";
-in
 {
   imports =
     [
@@ -11,15 +8,15 @@ in
       ./base.nix
       ./sound.nix
       ./printers.nix
-#      ./email.nix
+      ./email.nix
       ./locale.nix
-#      ./wayland.nix
+      ./wayland.nix
       ./packages.nix
       #
       # Scheduled services
       #
-#      ./scheduling/sync-email.nix
-#      ./scheduling/email-reminders.nix
-#      ./scheduling/recollindex.nix
+      ./scheduling/sync-email.nix
+      ./scheduling/email-reminders.nix
+      ./scheduling/recollindex.nix
     ];
 }
