@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, hostname, ... }:
 
 {
 
@@ -21,7 +21,7 @@
   # services.udev.packages = with pkgs; [ vial via ];
 
   networking = {
-    hostName = "wombat11k";
+    hostName = "${hostname}";
 
     interfaces = {
       enp67s0.useDHCP = true;

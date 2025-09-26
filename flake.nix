@@ -14,7 +14,21 @@
           hostname = "wombat11k";
           inherit inputs;
         };
-        modules = [ ./configuration.nix ];
+        modules =
+	  [
+            (./. + "/wombat11k-hardware-configuration.nix")
+            (./. + "/wombat11k.nix")
+            ./base.nix
+            ./sound.nix
+            ./printers.nix
+            ./email.nix
+            ./locale.nix
+            ./wayland.nix
+            ./packages.nix
+            ./scheduling/sync-email.nix
+            ./scheduling/email-reminders.nix
+	    ./scheduling/recollindex.nix
+	  ];
       };
     };
 
