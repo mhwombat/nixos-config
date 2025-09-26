@@ -68,34 +68,35 @@
   # alias ll='ls -l'
   # alias ls='ls --color=tty'
 
-  environment.shellInit = ''
-    #
-    # functions
-    #
-    function fadoc0() { find "''${1:-.}" -name "*.adoc0" -print | sort ;}
-    function fadoc() { find "''${1:-.}" -name "*.adoc" -print | sort ;}
-    function fex() { find "''${1:-.}" -executable -type f ;}
-    function fhs() { find "''${1:-.}" -name dist-newstyle -prune -o -name "*.hs" -print | sort ;}
-    function fipynb() { find "''${1:-.}" -name "*.ipynb" | grep -v ipynb_checkpoints | sort ;}
-    function flua() { find "''${1:-.}" -name "*.lua" -print | sort ;}
-    function fmd() { find "''${1:-.}" -name "*.md" | sort ;}
-    function gic() { git add $*; git commit -m "initial commit" $* ;}
-    function next() { remind -n ~/.config/remind $1 | sort; }
-    function nghci() { nix-shell -p "haskellPackages.ghcWithPackages (p: [$*])" --run ghci ;}
-    function ngrep() { grep -i $* ''${HOME}/github/notes/* ;}
-    function qc() { grep prop_ $* | grep "∷" | sed "s/ ∷.*//; s/\(.*\)/    testProperty "\1"\n      \1,/" ;}
-    function sadoc0 { fadoc0 $2 | xargs grep "$1" ;}
-    function sadoc { fadoc $2 | xargs grep "$1" ;}
-    function shs { fhs $2 | xargs grep "$1" ;}
-    function sipynb { fipynb $2 | xargs grep "$1" ;}
-    function slua { flua $2 | xargs grep "$1" ;}
-    function smd { fmd $2 | xargs grep "$1" ;}
-    function stylish { stylish-haskell --inplace --recursive "''${1:-.}" ;}
-
-    # cat-until PATTERN FILE
-    #     Prints FILE up to the first line that matches PATTERN
-    function cat-until { sed -n "1,/$1/ p" "$2" ;}
-  '';
+# this stuff isn't posix-compliant, and it's not getting picked up by bash
+#   environment.shellInit = ''
+#     #
+#     # functions
+#     #
+#     function fadoc0() { find "''${1:-.}" -name "*.adoc0" -print | sort ;}
+#     function fadoc() { find "''${1:-.}" -name "*.adoc" -print | sort ;}
+#     function fex() { find "''${1:-.}" -executable -type f ;}
+#     function fhs() { find "''${1:-.}" -name dist-newstyle -prune -o -name "*.hs" -print | sort ;}
+#     function fipynb() { find "''${1:-.}" -name "*.ipynb" | grep -v ipynb_checkpoints | sort ;}
+#     function flua() { find "''${1:-.}" -name "*.lua" -print | sort ;}
+#     function fmd() { find "''${1:-.}" -name "*.md" | sort ;}
+#     function gic() { git add $*; git commit -m "initial commit" $* ;}
+#     function next() { remind -n ~/.config/remind $1 | sort; }
+#     function nghci() { nix-shell -p "haskellPackages.ghcWithPackages (p: [$*])" --run ghci ;}
+#     function ngrep() { grep -i $* ''${HOME}/github/notes/* ;}
+#     function qc() { grep prop_ $* | grep "∷" | sed "s/ ∷.*//; s/\(.*\)/    testProperty "\1"\n      \1,/" ;}
+#     function sadoc0 { fadoc0 $2 | xargs grep "$1" ;}
+#     function sadoc { fadoc $2 | xargs grep "$1" ;}
+#     function shs { fhs $2 | xargs grep "$1" ;}
+#     function sipynb { fipynb $2 | xargs grep "$1" ;}
+#     function slua { flua $2 | xargs grep "$1" ;}
+#     function smd { fmd $2 | xargs grep "$1" ;}
+#     function stylish { stylish-haskell --inplace --recursive "''${1:-.}" ;}
+#
+#     # cat-until PATTERN FILE
+#     #     Prints FILE up to the first line that matches PATTERN
+#     function cat-until { sed -n "1,/$1/ p" "$2" ;}
+#   '';
 
 #  programs.direnv.enable = true;
 }
