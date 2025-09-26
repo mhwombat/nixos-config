@@ -1,6 +1,18 @@
 { config, pkgs, hostname, ... }:
 
 {
+  imports =
+    [
+      (./. + "/${hostname}-hardware-configuration.nix")
+      (./. + "/${hostname}.nix")
+      ./sound.nix
+      ./printers.nix
+      ./email.nix
+      ./locale.nix
+      ./wayland.nix
+      ./packages.nix
+    ];
+
   # Allow software with an unfree license
   # nixpkgs.config.allowUnfree = true;
 

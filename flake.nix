@@ -17,15 +17,7 @@
         };
         modules =
 	  [
-            (./. + "/wombat11k-hardware-configuration.nix")
-            (./. + "/wombat11k.nix")
             ./base.nix
-            ./sound.nix
-            ./printers.nix
-            ./email.nix
-            ./locale.nix
-            ./wayland.nix
-            ./packages.nix
 	    ./shannagh-wifi.nix
             ./scheduling/sync-email.nix
             ./scheduling/email-reminders.nix
@@ -41,15 +33,7 @@
         };
         modules =
 	  [
-            (./. + "/sage-hardware-configuration.nix")
-            (./. + "/sage.nix")
             ./base.nix
-            ./sound.nix
-            ./printers.nix
-            ./email.nix
-            ./locale.nix
-#            ./wayland.nix
-            ./packages.nix
 	    ./shannagh-wifi.nix
 	  ];
       }; # sage
