@@ -2,11 +2,6 @@
 
 {
 
-#   imports =
-#     [
-#       ./shannagh-wifi.nix
-#     ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -20,39 +15,15 @@
   # Support for configurable keyboard
   # services.udev.packages = with pkgs; [ vial via ];
 
-  networking = {
-    hostName = "${hostname}";
-
-    interfaces = {
-      enp67s0.useDHCP = true;
-      enp68s0.useDHCP = true;
-      wlo2.useDHCP = true;
-
-      # Uncomment TEMPORARILY to diagnose firewall problems
-      # firewall.enable = false;
-    }; # interfaces
-
- }; # networking
+  networking.hostName = "${hostname}";
 
   # Enable the OpenSSH daemon.
   # services.sshd.enable = true;
-
-#  services.zoneminder = {
-#    enable = true;
-#    port = 895;
-#    cameras = 5;
-#  };
-
-#  services.mysql = {
-#    enable = true;
-#    package = pkgs.mariadb;
-#  };
 
 #  # Automatic upgrades
 #  system.autoUpgrade = {
 #    enable = true;
 #    allowReboot = false; # Do nixos-rebuild switch --upgrade instead
-#    channel = "https://channels.nixos.org/nixos-unstable";
 #  };
 
   # This value determines the NixOS release from which the default
