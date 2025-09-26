@@ -8,6 +8,7 @@
   outputs = { self, nixpkgs, ... }@inputs: {
 
     nixosConfigurations = {
+
       wombat11k = nixpkgs.lib.nixosSystem {
         specialArgs = {
           system = "x86_64-linux";
@@ -30,8 +31,30 @@
             ./scheduling/email-reminders.nix
 	    ./scheduling/recollindex.nix
 	  ];
-      };
-    };
+      }; # wombat11k
+
+      sage = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          system = "x86_64-linux";
+          hostname = "sage";
+          inherit inputs;
+        };
+        modules =
+	  [
+            (./. + "/sage-hardware-configuration.nix")
+            (./. + "/sage.nix")
+            ./base.nix
+            ./sound.nix
+            ./printers.nix
+            ./email.nix
+            ./locale.nix
+#            ./wayland.nix
+            ./packages.nix
+	    ./shannagh-wifi.nix
+	  ];
+      }; # sage
+
+    }; # nixosConfigurations
 
   };
 
