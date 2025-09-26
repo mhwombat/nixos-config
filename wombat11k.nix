@@ -15,8 +15,6 @@
   # Support for configurable keyboard
   # services.udev.packages = with pkgs; [ vial via ];
 
-  networking.hostName = "${hostname}";
-
   # Enable the OpenSSH daemon.
   # services.sshd.enable = true;
 

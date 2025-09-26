@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, hostname, ... }:
 
 {
   # Allow software with an unfree license
@@ -13,6 +13,8 @@
   # These variables end up in /etc/set-environment.
   # They may not take effect until you log out and back in again.
   environment.variables = import ./environment-variables.nix;
+
+  networking.hostName = "${hostname}";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.amy = {
