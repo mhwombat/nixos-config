@@ -2,10 +2,14 @@
 
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
-    hello-flake.url = git+https://codeberg.org/mhwombat/hello-flake;
+    # hello-flake.url = git+https://codeberg.org/mhwombat/hello-flake;
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
 
     nixosConfigurations = {
 
@@ -22,6 +26,15 @@
             ./scheduling/sync-email.nix
             ./scheduling/email-reminders.nix
 	    ./scheduling/recollindex.nix
+#             home-manager.nixosModules.home-manager
+#               {
+#                 home-manager.useGlobalPkgs = true;
+#                 home-manager.useUserPackages = true;
+#                 home-manager.users.amy = ./amy.nix;
+#
+#                 # Optionally, use home-manager.extraSpecialArgs to pass
+#                 # arguments to home.nix
+#               }
 	  ];
       }; # wombat11k
 

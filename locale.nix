@@ -22,4 +22,17 @@
 
   # Set your time zone.
   time.timeZone = "Europe/Dublin";
+
+  # These variables end up in /etc/set-environment.
+  # They may not take effect until you log out and back in again.
+  environment.variables = {
+    # To see all keyboard layouts: localectl list-x11-keymap-layouts
+    XKB_DEFAULT_LAYOUT = "ie,gr";
+    # To see all keyboard variants: localectl list-x11-keymap-variants
+    XKB_DEFAULT_VARIANT = "CloGaelach,";
+    # To see all keyboard options: localectl list-x11-keymap-options
+    # Configure Alt+CapsLock to switch between keyboard layouts.
+    XKB_DEFAULT_OPTIONS = "compose:rctrl-altgr,grp:alt_caps_toggle";
+  };
+
 }
