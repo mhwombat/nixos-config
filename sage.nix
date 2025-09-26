@@ -7,14 +7,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.memtest86.enable = true; # add memtest to boot menu
 
-REMOVE
-  networking.hostName = "sage"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-REMOVE
-  # Enable networking
-  networking.networkmanager.enable = true;
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
