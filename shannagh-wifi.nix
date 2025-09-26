@@ -12,10 +12,9 @@
       networks = {
         # pskRaw is generated with the command: wpa_passphrase SSID password
 #        "vodafone4806D2".pskRaw = "e7f79c45987c0ca510a19b3600ae34f4df8046db3d7e789f789ea6b2f7aa518c";
-        "TeachMeabhair".pskRaw = "psk=9b2c9cb3d4ff1694b2d324c426e2d6f36b40decd05c1e0acb405d25fb27f3112";
+        "TeachMeabhair".pskRaw = "016cc86f010caae89e62ebeb79e9ab4fb3f22d932b1a402ef6d6e1604fbee71f";
       };
-    };
-
- };
+    }; # wireless
+  };
 
 }

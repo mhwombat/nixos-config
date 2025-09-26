@@ -25,6 +25,7 @@
             ./locale.nix
             ./wayland.nix
             ./packages.nix
+	    ./shannagh-wifi.nix
             ./scheduling/sync-email.nix
             ./scheduling/email-reminders.nix
 	    ./scheduling/recollindex.nix
