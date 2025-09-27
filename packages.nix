@@ -35,7 +35,6 @@ with pkgs;
     direnv
     # dolphin
     firefox # X and wayland
-    font-awesome # used by waybar
     foot # used by my sway config
     fuzzel
     ghc # required for haskell-language-server
@@ -47,6 +46,7 @@ with pkgs;
     gnumake
     haskellPackages.haskell-language-server
 #    haskellPackages.hls-stylish-haskell-plugin # for language server BROKEN on 2024-08-02
+    hyprpicker # color picker, wayland
     imagemagick
     imv
     inkscape # X and wayland
@@ -75,7 +75,6 @@ with pkgs;
     unzip
     # via
     # vial
-    # vistafonts # True-type fonts from MS Windows
     vlc
     waybar # wayland only # used by my sway config (instead of swaybar)
     wdiff

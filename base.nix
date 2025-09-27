@@ -25,6 +25,10 @@
 
   networking.hostName = "${hostname}";
 
+  fonts.packages = with pkgs; [
+    font-awesome # used by waybar
+  ];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.amy = {
     isNormalUser = true;
