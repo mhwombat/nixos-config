@@ -20,6 +20,17 @@
     LC_TIME = "en_IE.UTF-8";
   };
 
+  # This affects localectl, which niri uses by default
+  services.xserver.xkb = {
+    # To see all keyboard layouts: localectl list-x11-keymap-layouts
+    layout = "ie,gr";
+    # To see all keyboard variants: localectl list-x11-keymap-variants
+    variant = "CloGaelach";
+    # To see all keyboard options: localectl list-x11-keymap-options
+    options = "compose:rctrl-altgr,grp:alt_caps_toggle";
+    # Alt+CapsLock switches between keyboard layouts.
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Dublin";
 
