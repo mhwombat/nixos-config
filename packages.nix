@@ -37,6 +37,7 @@ with pkgs;
     firefox # X and wayland
     font-awesome # used by waybar
     foot # used by my sway config
+    fuzzel
     ghc # required for haskell-language-server
     gitAndTools.gitFull
     git-crypt
