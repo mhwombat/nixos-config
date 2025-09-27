@@ -1,6 +1,10 @@
 { config, ... }:
 
 {
+  programs.lightdm = {
+    enable = true;
+  };
+
   programs.xwayland = {
     enable = true;
   };
