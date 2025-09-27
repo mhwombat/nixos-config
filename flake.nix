@@ -20,22 +20,13 @@
           inherit inputs;
         };
         modules =
-	  [
+          [
             ./base.nix
-	    ./shannagh-wifi.nix
+            ./shannagh-wifi.nix
             ./scheduling/sync-email.nix
             ./scheduling/email-reminders.nix
-	    ./scheduling/recollindex.nix
-#             home-manager.nixosModules.home-manager
-#               {
-#                 home-manager.useGlobalPkgs = true;
-#                 home-manager.useUserPackages = true;
-#                 home-manager.users.amy = ./amy.nix;
-#
-#                 # Optionally, use home-manager.extraSpecialArgs to pass
-#                 # arguments to home.nix
-#               }
-	  ];
+            ./scheduling/recollindex.nix
+          ];
       }; # wombat11k
 
       sage = nixpkgs.lib.nixosSystem {
@@ -45,10 +36,10 @@
           inherit inputs;
         };
         modules =
-	  [
+          [
             ./base.nix
-	    ./shannagh-wifi.nix
-	  ];
+            ./shannagh-wifi.nix
+          ];
       }; # sage
 
     }; # nixosConfigurations
