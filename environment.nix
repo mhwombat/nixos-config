@@ -23,6 +23,8 @@
   };
 
 
+  # These variables end up in /etc/bashrc.
+  # They may not take effect until you log out and back in again.
   environment.shellAliases = {
     ahgrep = "all-history | grep";
     cb = "cabal build --ghc-options=-Werror";
@@ -52,6 +54,7 @@
     roll = "format-zpl | lpr -P Zebra -o raw";
     run-dwl = "dwl > dwl.log 2>&1";
     run-hikari = "hikari > hikari.log 2>&1";
+    run-niri = "niri-session > niri.log 2>&1";
     run-qtile = "qtile start -b wayland > qtile.log 2>&1";
     run-river = "river > river.log 2>&1";
     run-sway = "rm -f sway.log.backup ; mv sway.log sway.log.backup 2>/dev/null ; sway > sway.log 2>&1";
