@@ -34,7 +34,7 @@
     isNormalUser = true;
     home = "/home/amy";
     description = "Amy de Buitléir";
-    extraGroups = [ "wheel" "networkmanager" "vboxsf" "docker" "audio" "dialout" ];
+    extraGroups = [ "wheel" "networkmanager" "vboxsf" "docker" "audio" "dialout" "input" ];
     uid = 1000;
     shell = pkgs.bashInteractive;
   };
