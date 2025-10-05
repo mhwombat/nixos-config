@@ -28,6 +28,7 @@ with pkgs;
     aspellDicts.en-computers
 #    aspellDicts.en-science
     autotiling  # used by my sway config
+    bashmount # disk mounter
     bemenu # used by my sway config
     brave
     # busybox DON'T USE! Overwrites realpath!
