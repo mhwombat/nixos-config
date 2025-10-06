@@ -14,11 +14,11 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.cinnamon.enable = true;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "ie";
-    variant = "CloGaelach";
-  };
+#  # Configure keymap in X11
+#  services.xserver.xkb = {
+#    layout = "ie";
+#    variant = "CloGaelach";
+#  };
 
   # Install firefox.
   programs.firefox.enable = true;
