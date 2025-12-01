@@ -19,6 +19,7 @@ with pkgs;
     # pkgs.amy-jot
     # pkgs.amy-textadept
     # inputs.hello-flake.packages."${pkgs.system}".default
+    inputs.wombat-themer.packages."${pkgs.system}".default
     #
     # Standard packages
     #
@@ -39,8 +40,8 @@ with pkgs;
     foot # used by my sway config
     fuzzel
     ghc # required for haskell-language-server
-    gitAndTools.gitFull
     git-crypt
+    gitFull
     git-lfs
     gimp # X and wayland
     # globalprotect-openconnect # provides gpclient
@@ -83,6 +84,7 @@ with pkgs;
     wl-clipboard # used by my sway config
     xfce.thunar
     xfce.tumbler
+    xwayland
     zip
 #    zoneminder
   ];
