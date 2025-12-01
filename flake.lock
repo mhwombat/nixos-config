@@ -1,32 +1,12 @@
 {
   "nodes": {
-    "home-manager": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1758899649,
-        "narHash": "sha256-Z6IxPlvIS83lKbTIliP2xFj4hJ699/eM7Ubte4iytgQ=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "6238bbc0ae04951b64a3ad1b69d3e03b8b329e51",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1757347588,
-        "narHash": "sha256-tLdkkC6XnsY9EOZW9TlpesTclELy8W7lL2ClL+nma8o=",
+        "lastModified": 1764517877,
+        "narHash": "sha256-pp3uT4hHijIC8JUK5MEqeAWmParJrgBVzHLNfJDZxg4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b599843bad24621dcaa5ab60dac98f9b0eb1cabe",
+        "rev": "2d293cbfa5a793b4c50d17c05ef9e385b90edf6c",
         "type": "github"
       },
       "original": {
@@ -36,10 +16,77 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1761229794,
+        "narHash": "sha256-YkH1zHrMIFVPPbWN/smJVay/o2mLeV4Dynfn6J8MaHA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ddd7747c41a3d12106c6a8d9c81720e13460b761",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1760805303,
+        "narHash": "sha256-xWz9ZoK29VsohP07Uk4sCQbzubcAFezFScNXY9qbuv0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "563b5142120c61c009c6996ca7d79c700b8af2b2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "properties-tools": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1760879177,
+        "narHash": "sha256-vB9Kv8wY5xP8XQvxirT9LzhPDfR00+nWzVRTXrrHBF8=",
+        "ref": "refs/heads/main",
+        "rev": "5d679edef38e3f0766f5446b2b54004d5882cbcb",
+        "revCount": 10,
+        "type": "git",
+        "url": "https://codeberg.org/mhwombat/properties-tools"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/mhwombat/properties-tools"
+      }
+    },
     "root": {
       "inputs": {
-        "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "wombat-themer": "wombat-themer"
+      }
+    },
+    "wombat-themer": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2",
+        "properties-tools": "properties-tools"
+      },
+      "locked": {
+        "lastModified": 1761421070,
+        "narHash": "sha256-TFGp1B3xCxJP86WGcPEFUmz3fpGJZ1e4TXq/5jlaw9c=",
+        "ref": "refs/heads/main",
+        "rev": "888dd43621c291d9416528ae24e74234ee694e2a",
+        "revCount": 20,
+        "type": "git",
+        "url": "https://codeberg.org/mhwombat/wombat-themer"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/mhwombat/wombat-themer"
       }
     }
   },
