@@ -60,8 +60,8 @@
     run-sway = "rm -f sway.log.backup ; mv sway.log sway.log.backup 2>/dev/null ; sway > sway.log 2>&1";
     # snap = "grim -g '$(slurp)'';
     sncg = "sudo nix-collect-garbage --delete-older-than 20d";
-    snrsu = "sudo nixos-rebuild switch --upgrade";
-    snrsui = "sudo nixos-rebuild switch --upgrade -I nixpkgs=/home/amy/github/nixpkgs";
+    snrs = "sudo nixos-rebuild switch";
+    snrsi = "sudo nixos-rebuild switch -I nixpkgs=/home/amy/github/nixpkgs";
     tad = "textadept --force --nosession --userhome $XDG_CONFIG_HOME/textadept";
     wdf = "wdiff -n -w $'\033[30;41m' -x $'\033[0m' -y $'\033[30;42m' -z $'\033[0m'";
   };
