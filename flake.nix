@@ -3,24 +3,23 @@
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
     # hello-flake.url = git+https://codeberg.org/mhwombat/hello-flake;
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    wombat-themer.url = git+https://codeberg.org/mhwombat/wombat-themer;
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: {
 
     nixosConfigurations = {
 
-      wombat11k = nixpkgs.lib.nixosSystem {
+      wombat11k = let hostnameNew = "wombat11k"; in nixpkgs.lib.nixosSystem {
         specialArgs = {
-          system = "x86_64-linux";
-          hostname = "wombat11k";
           inherit inputs;
         };
         modules =
           [
+            { nixpkgs.hostPlatform = "x86_64-linux"; }
+            { networking.hostName = "${hostnameNew}"; }
+            (./. + "/${hostnameNew}-hardware-configuration.nix")
+            (./. + "/${hostnameNew}.nix")
             ./base.nix
             ./shannagh-wifi.nix
             ./scheduling/sync-email.nix
@@ -29,14 +28,16 @@
           ];
       }; # wombat11k
 
-      sage = nixpkgs.lib.nixosSystem {
+      sage = let hostnameNew = "sage"; in nixpkgs.lib.nixosSystem {
         specialArgs = {
-          system = "x86_64-linux";
-          hostname = "sage";
           inherit inputs;
         };
         modules =
           [
+            { nixpkgs.hostPlatform = "x86_64-linux"; }
+            { networking.hostName = "${hostnameNew}"; }
+            (./. + "/${hostnameNew}-hardware-configuration.nix")
+            (./. + "/${hostnameNew}.nix")
             ./base.nix
             ./shannagh-wifi.nix
           ];

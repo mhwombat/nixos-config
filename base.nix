@@ -1,10 +1,7 @@
-{ config, pkgs, hostname, ... }:
-
+{ config, pkgs, ... }:
 {
   imports =
     [
-      (./. + "/${hostname}-hardware-configuration.nix")
-      (./. + "/${hostname}.nix")
       ./sound.nix
       ./printers.nix
       ./email.nix
@@ -23,7 +20,11 @@
   # Enable Nix flakes
   nix.extraOptions = "experimental-features = nix-command flakes";
 
-  networking.hostName = "${hostname}";
+  # Allow auto-mounting of USB storage devices
+  services.udisks2.enable = true;
+
+  # allow users to manage removable media
+  # services.udiskie.enable = true;
 
   fonts.packages = with pkgs; [
     font-awesome # used by waybar
