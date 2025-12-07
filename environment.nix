@@ -51,6 +51,7 @@
     # pick-colour = "grim -g $(slurp -p) -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:-";
     psgrep = "ps -ef | grep";
     remedit = "nano ~/.config/remind/private.rem";
+    remlist = "remind -n -b1 ~/.config/remind | sort -n";
     roll = "format-zpl | lpr -P Zebra -o raw";
     run-dwl = "dwl > dwl.log 2>&1";
     run-hikari = "hikari > hikari.log 2>&1";
