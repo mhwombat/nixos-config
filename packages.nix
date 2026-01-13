@@ -18,8 +18,8 @@ with pkgs;
     #
     # pkgs.amy-jot
     # pkgs.amy-textadept
-    # inputs.hello-flake.packages."${pkgs.system}".default
-    inputs.wombat-themer.packages."${pkgs.system}".default
+    # inputs.hello-flake.packages."${pkgs.stdenv.hostPlatform.system}".default
+    inputs.wombat-themer.packages."${pkgs.stdenv.hostPlatform.system}".default
     #
     # Standard packages
     #
@@ -28,16 +28,16 @@ with pkgs;
     aspellDicts.en
     aspellDicts.en-computers
 #    aspellDicts.en-science
-    autotiling  # used by my sway config
+#    autotiling  # used by my sway config
     bashmount # disk mounter
-    bemenu # used by my sway config
+#    bemenu # used by my sway config
     brave
     # busybox DON'T USE! Overwrites realpath!
     chromium # X-only? See ozone?
     direnv
     # dolphin
     firefox # X and wayland
-    foot # used by my sway config
+    foot
     fuzzel
     ghc # required for haskell-language-server
     git-crypt
@@ -54,11 +54,11 @@ with pkgs;
     inkscape # X and wayland
     kdePackages.okular
     libreoffice # X and wayland
-    litemdview
+#    litemdview # BROKEN on 2025-01-10
     meld # X and wayland
     nix-direnv
     nix-index # provides nix-locate
-#    noson
+#    noson # sonos alternative
     notmuch
     # onedrive
     pandoc
@@ -73,17 +73,17 @@ with pkgs;
     # sway enabled in wayland.nix
     textadept
     texlive.combined.scheme-full
+    thunar
     tree
+    tumbler # used by thunar for thumbnails
     unzip
     # via
     # vial
     vlc
-    waybar # wayland only # used by my sway config (instead of swaybar)
+    waybar # wayland only # used by my niri config
     wdiff
     # wev # X and wayland, installed with sway by default
-    wl-clipboard # used by my sway config
-    xfce.thunar
-    xfce.tumbler
+    wl-clipboard
     xwayland
     zip
 #    zoneminder
