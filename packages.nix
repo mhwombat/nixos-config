@@ -70,6 +70,7 @@ with pkgs;
     remind
     signal-desktop # X-only
     starship
+    sunsetr # blue light filter for nighttime
     # sway enabled in wayland.nix
     textadept
     texlive.combined.scheme-full
