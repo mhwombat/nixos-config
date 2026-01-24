@@ -2,13 +2,12 @@
 {
   services.nginx.enable = true;
   services.nginx.virtualHosts."localhost" = {
-      addSSL = true;
-      enableACME = true;
-#      root = "/home/amy/github/eolas";
-      root = "/home/amy/tech-experiments/pandoc-cgi";
+      addSSL = false;
+      enableACME = false;
+      root = "/var/www/localhost";
   };
-  security.acme = {
-    acceptTerms = true;
-    defaults.email = "foo@bar.com";
-  };
+#   security.acme = {
+#     acceptTerms = true;
+#     defaults.email = "foo@bar.com";
+#   };
 }

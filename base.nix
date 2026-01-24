@@ -9,6 +9,7 @@
       ./wayland.nix
       ./environment.nix
       ./packages.nix
+      # ./web-server.nix
     ];
 
   # Allow software with an unfree license
