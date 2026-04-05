@@ -1,6 +1,7 @@
 final: prev: {
   amy-jot = final.haskellPackages.callPackage ./jot {};
   amy-textadept = final.libsForQt5.callPackage /home/amy/github/nixpkgs/pkgs/by-name/te/textadept/package.nix {};
+  alacritty-scrollbar = final.callPackage /home/amy/github/nixpkgs/pkgs/by-name/al/alacritty-scrollbar/package.nix { withGraphics = true; };
   pandoc-linear-table = final.haskellPackages.callPackage ./pandoc-linear-table {};
   pandoc-logic-proof = final.haskellPackages.callPackage ./pandoc-logic-proof {};
   pandoc-columns = final.haskellPackages.callPackage ./pandoc-columns {};

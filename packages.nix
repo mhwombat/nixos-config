@@ -20,6 +20,7 @@ with pkgs;
     # pkgs.amy-textadept
     # inputs.hello-flake.packages."${pkgs.stdenv.hostPlatform.system}".default
     inputs.wombat-themer.packages."${pkgs.stdenv.hostPlatform.system}".default
+    # alacritty-scrollbar
     #
     # Standard packages
     #
@@ -40,6 +41,7 @@ with pkgs;
     foot
     fuzzel
     ghc # required for haskell-language-server
+    ghostty
     git-crypt
     gitFull
     git-lfs
@@ -54,8 +56,10 @@ with pkgs;
     inkscape # X and wayland
     kdePackages.okular
     libreoffice # X and wayland
+    librewolf
 #    litemdview # BROKEN on 2025-01-10
     meld # X and wayland
+    mullvad-browser
     nix-direnv
     nix-index # provides nix-locate
 #    noson # sonos alternative
@@ -84,6 +88,7 @@ with pkgs;
     waybar # wayland only # used by my niri config
     wdiff
     # wev # X and wayland, installed with sway by default
+    wezterm
     wl-clipboard
     xwayland
     zip

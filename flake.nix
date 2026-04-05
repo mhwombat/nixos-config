@@ -2,6 +2,7 @@
 
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
+    # nixpkgs.url = git+file:///home/amy/github/nixpkgs;
     # hello-flake.url = git+https://codeberg.org/mhwombat/hello-flake;
     wombat-themer.url = git+https://codeberg.org/mhwombat/wombat-themer;
   };
