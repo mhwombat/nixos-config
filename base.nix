@@ -31,6 +31,23 @@
     font-awesome # used by waybar
   ];
 
+  xdg.mime.defaultApplications = {
+    "application/pdf" = "okularApplication_pdf.desktop";
+    "application/x-extension-htm" = "librewolf.desktop";
+    "application/x-extension-html" = "librewolf.desktop";
+    "application/x-extension-shtml" = "librewolf.desktop";
+    "application/x-extension-xht" = "librewolf.desktop";
+    "application/x-extension-xhtml" = "librewolf.desktop";
+    "application/xhtml+xml" = "librewolf.desktop";
+    "application/x-zerosize" = "librewolf.desktop";
+    "text/html" = "librewolf.desktop";
+    "x-scheme-handler/chrome" = "librewolf.desktop";
+    "x-scheme-handler/http" = "librewolf.desktop";
+    "x-scheme-handler/https" = "librewolf.desktop";
+    "x-scheme-handler/sgnl" = "signal.desktop";
+    "x-scheme-handler/signalcaptcha" = "signal.desktop";
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.amy = {
     isNormalUser = true;
