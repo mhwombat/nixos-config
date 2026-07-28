@@ -27,6 +27,9 @@
   # allow users to manage removable media
   # services.udiskie.enable = true;
 
+  # BIOS updates
+  services.fwupd.enable = true;
+
   fonts.packages = with pkgs; [
     font-awesome # used by waybar
   ];
