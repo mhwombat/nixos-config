@@ -22,6 +22,7 @@
             (./. + "/${hostnameNew}-hardware-configuration.nix")
             (./. + "/${hostnameNew}.nix")
             ./base.nix
+            ./secrets.nix
             ./shannagh-wifi.nix
             ./scheduling/sync-email.nix
             ./scheduling/email-reminders.nix
