@@ -27,7 +27,7 @@ with pkgs;
     # alacritty # X and wayland
     aspell
     aspellDicts.en
-    aspellDicts.en-computers
+#    aspellDicts.en-computers
 #    aspellDicts.en-science
 #    autotiling  # used by my sway config
     bashmount # disk mounter
@@ -57,7 +57,7 @@ with pkgs;
     kdePackages.okular
     libreoffice # X and wayland
     librewolf
-#    litemdview # BROKEN on 2025-01-10
+    litemdview
     meld # X and wayland
     mullvad-browser
     nix-direnv
@@ -77,7 +77,7 @@ with pkgs;
     sunsetr # blue light filter for nighttime
     # sway enabled in wayland.nix
     textadept
-    texlive.combined.scheme-full
+    texliveFull # texlive.combined.scheme-full
     thunar
     tree
     tumbler # used by thunar for thumbnails
