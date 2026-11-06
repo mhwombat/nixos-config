@@ -9,7 +9,6 @@
       ./wayland.nix
       ./environment.nix
       ./packages.nix
-      ./secrets.nix
       # ./web-server.nix
     ];
 
