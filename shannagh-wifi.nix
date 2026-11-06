@@ -8,8 +8,10 @@
     wireless = {
       enable = true;  # Enables wireless support via wpa_supplicant.
       userControlled = true; # enable use of wpa_cli (or wpa_gui if you install wpa_supplicant_gui)
+#      secretsFile = "/run/secrets/wireless.conf";
       networks = {
         # pskRaw is generated with the command: wpa_passphrase SSID password
+#         "Vodafone-A050".psk = "ext:psk_home";
 #        "Vodafone-A050".pskRaw = "afb22809c9206992aa190aba451b0e5ab9221dfde827bdb13e9c0231e5f32245";
 #        "vodafone4806D2".pskRaw = "e7f79c45987c0ca510a19b3600ae34f4df8046db3d7e789f789ea6b2f7aa518c";
 #        "TeachMeabhair".pskRaw = "016cc86f010caae89e62ebeb79e9ab4fb3f22d932b1a402ef6d6e1604fbee71f";

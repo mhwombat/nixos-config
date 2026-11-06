@@ -40,6 +40,7 @@
             (./. + "/${hostnameNew}-hardware-configuration.nix")
             (./. + "/${hostnameNew}.nix")
             ./base.nix
+            ./secrets.nix
             ./shannagh-wifi.nix
           ];
       }; # sage
