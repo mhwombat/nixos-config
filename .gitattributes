@@ -1,4 +1,0 @@
-# WARNIING: LFS and git-crypt don't play well together; keep them separate.
-
-# git-crypt
-secrets.nix filter=git-crypt diff=git-crypt
