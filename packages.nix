@@ -90,6 +90,7 @@ with pkgs;
     # wev # X and wayland, installed with sway by default
     wezterm
     wl-clipboard
+    wpa_supplicant
     xwayland
     zip
 #    zoneminder
